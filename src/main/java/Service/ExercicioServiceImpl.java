@@ -38,9 +38,9 @@ public abstract class ExercicioServiceImpl implements ExercicioService {
         Exercicio exercicioExistente = exercicioRepository.findById(id).orElse(null);
 
         if (exercicioExistente != null) {
-            exercicioExistente.setName(updatedExercicio.getName());
-            exercicioExistente.setDescription(updatedExercicio.getDescription());
-            exercicioExistente.setDayOfWeek(updatedExercicio.getDayOfWeek());
+            exercicioExistente.setNome(updatedExercicio.getNome());
+            exercicioExistente.setDescricao(updatedExercicio.getDescricao());
+            exercicioExistente.setDiaDaSemana(updatedExercicio.getDiaDaSemana());
 
             return exercicioRepository.save(exercicioExistente);
         }
